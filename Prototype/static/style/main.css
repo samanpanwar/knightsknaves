@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+body{
+  margin: 0;
+}
+
+#main-container{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+}
+
+#main-grid{
+  width: 80vw;
+  height: 90vh;
+  margin: auto;
+  /* border: solid gray 2px; */
+  padding: 10px;
+  border-radius: 10px;
+  display: grid;
+  grid-template:
+  "title title title"
+  "image desciption desciption"
+  "puzzle puzzle puzzle";
+  grid-template-rows: 50px 200px auto;
+  grid-template-columns: 200px auto auto;
+  grid-gap: 10px;
+}
+
+#title{
+  grid-area: title;
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Roboto';
+}
+
+#image{
+  grid-area: image;
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+
+#description{
+  grid-area: desciption;
+  margin: auto;
+  align-self: center;
+  text-align: justify;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+#puzzle-area{
+  grid-area: puzzle;
+  align-self: center;
+  border: solid gray 2px;
+  border-radius: 10px;
+  padding: 25px;
+  display: grid;
+  height: 80%;
+  grid-template:
+  "pztxt pztxt pztxt"
+  "generate-btn . .";
+  grid-template-rows: auto 80px;
+}
+
+#puzzle-text{
+  grid-area: pztxt;
+  text-align: justify;
+  font-family: 'Montserrat';
+  font-size: 16px;
+}
+
+#generate-btn{
+  width: 100px;
+  height: 50px;
+  /* background: pink; */
+  text-align: center;
+  line-height: 50px;
+  font-family: 'Roboto';
+  border: solid #772D8B 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#generate-btn:hover{
+  background: #772D8B;
+  color: #fff;
+}
+
+ #generate-btn:hover > i{
+   border-color: #fff;
+ }
+
+#generate-btn:active{
+  transform: translateY(5px);
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
